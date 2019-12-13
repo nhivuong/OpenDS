@@ -28,7 +28,6 @@ def calculate(mat, thresh):
         local_max_avg = 0.0
     return global_max, count_local_max, local_max_avg
 
-
 def processNormalization(mat):
     #M = 10
     M=90
@@ -57,7 +56,6 @@ def process2(mat):
     maxima = np.multiply(maxima, mat)
     mbar = float(maxima.sum()) / mnum
     return mat * (M-mbar)**2
-
 
 def OFMcompute(L, gaborparams, thetas):
     '''
@@ -106,6 +104,7 @@ def getPyramid(image, max_level):
     } # scale zero = 1:1
 
     for i in range(1, max_level):
+        # Gaussian pyramid
         imagePyramid[i] = cv2.pyrDown(imagePyramid[i-1])
 
     return imagePyramid
