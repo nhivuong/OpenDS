@@ -13,6 +13,7 @@ cv2
 numpy
 scipy
 ````
+Version differences don't cause major issue.
 
 ### How to run: 
 From terminal, run the command: ````python3 main.py````
