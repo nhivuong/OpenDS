@@ -3,4 +3,22 @@ Open-source implementation of Discriminant Center-surround Hypothesis on Salienc
 
 This is a project work dedicated to EECS 4422 - Computer Vision course at York University, Fall 2019. 
 
-Credit: The code relies mostly on Itti-koch implementation from https://github.com/shreelock/gbvs/blob/master/ittikochneibur.py
+### Installation Instruction: 
+Please pull/ clone this repo
+
+### Requirements: 
+Make sure python 3.6 and the following packages are installed:
+```` 
+cv2
+numpy
+scipy
+````
+
+### How to run: 
+From terminal, run the command: ````python3 main.py````
+
+Then in current dir, check for file: ```sal_map.jpg```
+
+### Credit: 
+Itti-koch implementation comes from https://github.com/shreelock/gbvs/blob/master/ittikochneibur.py
+
