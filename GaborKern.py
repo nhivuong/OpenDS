@@ -3,6 +3,9 @@ import numpy as np
 import math
 
 def getGaborKernel(gaborparams, angle, phase):
+    '''
+        Calculate a Gabor kernel with provided angle and phase
+    '''
     gp = gaborparams
     major_sd = gp['stddev']
     minor_sd = major_sd * gp['elongation']
@@ -51,6 +54,12 @@ def getGaborKernel(gaborparams, angle, phase):
 
 
 def getGaborKernels(gaborparams, thetas):
+    '''
+        Produce Gabor kernels for 0, 45, 90 and 135 degrees.
+        However this is unneccessary, having 0, 45 and 90 should be more than enough.
+        135 was added for the sake of investigating behavior of Gabor even though 
+        saliency detection remains the same.
+    '''
     gaborKernels = {}
     for th in thetas:
         gaborKernels[th] = {}

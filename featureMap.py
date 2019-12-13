@@ -5,6 +5,9 @@ import numpy as np
 def CFMcompute(r, g, b, I):
     ''' 
         Itty Koch Feature Decomposing
+        Implementation based on the formula provided in Itti-koch paper.
+        Separate into R, G, B color channels as well as Intensity, and Y
+        ( combination of R and G)
     '''
 
     max_I = I.max()
@@ -37,7 +40,9 @@ def CFMcompute(r, g, b, I):
     return featMaps
 
 def CSFcompute(feature_pyramids):
-    # Center Surround Map
+    '''
+        Center Surround Map
+    '''
     center_levels = [2, 3, 4]
     delta = [2, 3]
     Ccs_array = { 0:[], 1:[] }
@@ -52,7 +57,6 @@ def CSFcompute(feature_pyramids):
                 Cc = feature_pyramids[c][i]
                 Cs = -feature_pyramids[s][i]
                 # to allow for chromatic opponency
-
                 Cs_scaled = cv2.resize(Cs, (Cc.shape[1], Cc.shape[0]), interpolation=cv2.INTER_CUBIC)
                 Ccs = (Cc - Cs_scaled) ** 2
                 Ccs_array[i].append(Ccs)

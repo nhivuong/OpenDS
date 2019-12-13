@@ -60,7 +60,10 @@ def process2(mat):
 
 
 def OFMcompute(L, gaborparams, thetas):
-    # L = Intensity Map
+    '''
+        Orientation Feature Map
+        L = Intensity Map
+    '''
     # L = np.maximum(np.maximum(r, g), b)
 
     kernels = getGaborKernels(gaborparams, thetas)
@@ -71,6 +74,7 @@ def OFMcompute(L, gaborparams, thetas):
         kernel_90 = kernels[th]['90']
         kernel_135 = kernels[th]['135']
         
+        # orientations of 0, 45, 90 and 135 degrees
         o1 = cv2.filter2D(L, -1, kernel_0, borderType=cv2.BORDER_REPLICATE)
         o2 = cv2.filter2D(L, -1, kernel_45, borderType=cv2.BORDER_REPLICATE)
         o3 = cv2.filter2D(L, -1, kernel_90, borderType=cv2.BORDER_REPLICATE)

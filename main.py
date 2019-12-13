@@ -27,14 +27,12 @@ def run(image, params):
         p_b = b_pyr[i]
         p_L = I_pyr[i]
 
+        # Calculate feature maps which are then recombined into one map
         maps = calculateFeatureMaps(p_r, p_g, p_b, p_L, params)
-
         scaledFeaturePyramids[i] = maps
-
 
     # calculating center surround feature maps
     centerSurroundFeatureMaps = CSFcompute(scaledFeaturePyramids)
-
 
     # normalizing activation maps
     normalised_maps =[]
@@ -83,9 +81,7 @@ def run(image, params):
     return mastermap_res
 
 def setupParams():
-    #'stddev': 2,
-    #'elongation': 2,
-    #'filterSize': -1,
+    # used in Gabor filter 
     gaborparams = {
         'stddev': 4,
         'elongation': 1.0,
@@ -93,8 +89,7 @@ def setupParams():
         'filterPeriod': np.pi
     }
     
-    #'sigma_frac_act': 0.15, 
-    #'sigma_frac_norm': 0.06,
+    # other utility paramters such as rescaling pyramid levels
     params = {
         'gaborparams': gaborparams,
         'sigma_frac_act': 0.16, 
