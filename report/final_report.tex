@@ -125,7 +125,7 @@ Therefore the qualitative results of the discriminant implementation don't perfo
     \label{fig:ROCscore}
 \end{figure}
 
-In terms of quantitive results, the saliency model was validated by computing the Area Under Curve (AUC) score of Receiver Operating Characteristic (ROC) curve. Perfect prediction corresponds to an ROC area (area under the ROC curve) of $1$, while chance performance occurs at an area of $0.5$. This project evaluated against AUC Borji metrics. Therefore maximum score is $0.5$. From the implementation (which can be reviewed in \texttt{eval.py}), the average AUC score is $0.33566215789500004$ . Typically, a 0.5 AUC means model has no class separation capacity. Since the observable output of OpenDS doesn't predict correct saliency on ground truth, this score is expected.
+In terms of quantitive results, the saliency model was validated by computing the Area Under Curve (AUC) score of Receiver Operating Characteristic (ROC) curve. Perfect prediction corresponds to an ROC area (area under the ROC curve) of $1$, while chance performance occurs at an area of $0.5$. This project evaluated against AUC Borji metrics. Therefore maximum score is $0.5$. From the implementation (which can be reviewed in \texttt{eval.py}), the average AUC score is $0.33566215789500004$ . Typically, a 0.5 AUC means model has no class separation capacity. Since the observable output of OpenDS doesn't predict correct saliency on ground truth, this score is expected. On the other hand, the AUC from each map doesn't exceed $0.5$, which indicates possible incorrect data labelling, etc. 
 
 \section{Code Repo}
 OpenDS Github: \url{https://github.com/nhivuong/OpenDS}
