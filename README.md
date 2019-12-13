@@ -45,5 +45,5 @@ From your Jupyter home, open ````OpenDS.ipynb````. This notebook should already 
 
 
 ### Credit: 
-Itti-koch implementation comes from https://github.com/shreelock/gbvs/blob/master/ittikochneibur.py
-
+Itti-koch implementation : https://github.com/shreelock/gbvs/blob/master/ittikochneibur.py
+AUC evaluation : https://github.com/tarunsharma1/saliency_metrics/blob/master/salience_metrics.py
