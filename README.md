@@ -20,6 +20,9 @@ From terminal, run the command: ````python3 main.py````
 
 Then in current dir, check for file: ```sal_map.jpg```
 
+If you wish to change the input image, please update this code line in ```main.py```
+```img = cv2.imread("./testimages/test3.png", 1)```
+
 ### Credit: 
 Itti-koch implementation comes from https://github.com/shreelock/gbvs/blob/master/ittikochneibur.py
 
