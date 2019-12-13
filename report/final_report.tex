@@ -89,7 +89,7 @@ Alternative solution is represent such mutual information for high dimension thr
 \end{figure}
 
 \section{Test Data}
-In order to test the model, image data was retrieved at the Toronto Dataset \cite{MITBenchmark_2012}. The images were collected under the research of Neil Bruce, John K. Tsotsos. \textit{Attention based on information maximization}. The dataset includes 120 color images of outdoor and indoor scenes. Each image is about size: 1024x768 pixels which helps minimize the processing time compared to an original photograph. The observers were 20 undergrads and grads student. The eye tracker device was ERICA workstation including a Hitachi CCD camera with an IR emitting LED.
+In order to test the model, image data was retrieved at the Toronto Dataset \cite{MITBenchmark_2012}. The images were collected under the research of Neil Bruce, John K. Tsotsos. \textit{Attention based on information maximization}. The dataset includes 120 color images of outdoor and indoor scenes. Each image is about size: 681 x 511 pixels which helps minimize the processing time compared to an original photograph. The observers were 20 undergrads and grads student. The eye tracker device was ERICA workstation including a Hitachi CCD camera with an IR emitting LED.
 
 In addition, large portion of images do not contain particular regions of interest which serve the purpose of testing the natural human fixation without any predictable features. 
 
@@ -101,14 +101,14 @@ The project final step would be to apply the implemented model to a set of input
 \begin{figure}[h]
     \centering
     \includegraphics[width=3.5in]{outputs.png}
-    \caption{Sample output table, from left to right: Original image, Discriminant map output and Actual eye-tracking data.) }
+    \caption{Sample output table, from left to right: Original image, Discriminant OpenDS output and Actual eye-tracking data.) }
     \label{fig:outputs1}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[trim={180 500 180 20},width=2.5in]{outputs2.pdf}
-    \caption{Sample output table, from left to right: Original image, Discriminant map output and Actual eye-tracking data.) }
+    \caption{Sample output table, from left to right: Original image, Discriminant OpenDS output and Actual eye-tracking data.) }
     \label{fig:outputs2}
 \end{figure}
 
@@ -116,21 +116,16 @@ In Figure \ref{fig:outputs2}, Discriminant model was tested using synthetic data
 
 In Figure \ref{fig:outputs1}, the test images are from Toronto dataset. The generated saliency maps didn't perform as well. For example, in the first image, the model focus more on the distinct white paint with different orientation angle, rather than the human shape or tree. Then in the pepper example, there's a lot of details (as in line and contour) going on, and the model picks those up rather choosing the red, yellow peppers.
 
-Therefore qualitative results of the discriminant implementation don't perform so well on actual indoor/outdoor scenery, but can detect simple synthetic image. 
+Therefore the qualitative results of the discriminant implementation don't perform so well on actual indoor/outdoor scenery, but can detect simple synthetic image. 
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=2.5in]{score.png}
-    \caption{ROC areas for different saliency models with respect to all human fixations.) }
+    \caption{ROC areas for different saliency models with respect to all human fixations including original implementation of discriminant model.) }
     \label{fig:ROCscore}
 \end{figure}
 
-
-\begin{figure*}[h]
-    \centering
-    \includegraphics[width=6in]{research.png}
-    \caption{ Illustration of discriminant center-surround saliency}
-    \label{fig:centersurround}
-\end{figure*}
+In terms of quantitive results, the saliency model was validated by computing the Area Under Curve (AUC) score of Receiver Operating Characteristic (ROC) curve. Perfect prediction corresponds to an ROC area (area under the ROC curve) of $1$, while chance performance occurs at an area of $0.5$. This project evaluated against AUC Borji metrics. Therefore maximum score is $0.5$. From the implementation (which can be reviewed in \texttt{eval.py}), the average AUC score is $0.33566215789500004$ . Typically, a 0.5 AUC means model has no class separation capacity. Since the observable output of OpenDS doesn't predict correct saliency on ground truth, this score is expected.
 
 \section{Code Repo}
 OpenDS Github: \url{https://github.com/nhivuong/OpenDS}
