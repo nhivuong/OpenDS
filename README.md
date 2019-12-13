@@ -34,14 +34,14 @@ Version differences don't cause major issue.
 ### How to run Python files: 
 From terminal, run the command: ````python3 main.py````
 
-Then in current dir, check for file: ```sal_map.jpg```
+This python code will write the result saliency map into your current dir, check for file: ```sal_map.jpg``` after executing.
 
 If you wish to change the input image, please update this code line in ```main.py```
 
 ```img = cv2.imread("./testimages/test3.png", 1)```
 
 ### How to run JupyterNotebook file: 
-From your Jupyter home, open ````OpenDS.ipynb````. This notebook should already contain some output to display through matplotlib.
+From your Jupyter home, open ````OpenDS.ipynb````. This notebook should already contain some output to display through matplotlib (jupyter code doesn't write output map into current dir).
 
 
 ### Credit: 
