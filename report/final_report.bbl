@@ -45,6 +45,11 @@ T.~Xu, Q.~Mühlbauer, and S.~Sosnowski, ``Looking at the surprise: Bottom-up
   \url{https://www.researchgate.net/publication/221144241\_Looking\_at\_the\newline\_Surprise\_Bottom\-Up\_Attentional\_Control\_of\_an\_Active\_Camera\_System}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Itti_Koch_1998}
+L.~Itti, C.~Koch, and E.~Niebur, ``A model of saliency-based visual attention
+  for rapid scene analysis,'' \emph{IEEE Transactions on Pattern Analysis and
+  Machine Intelligence}, vol.~20, no.~11, p. 1254–1259, 1998.
+
 \bibitem{MITBenchmark_2012}
 \BIBentryALTinterwordspacing
 2012. [Online]. Available: \url{http://saliency.mit.edu/results\_mit300.html}
