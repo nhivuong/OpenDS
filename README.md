@@ -10,6 +10,7 @@ Within this repo, there are the following files:
 |      |--miscellaneous files of .tex and .png
 |--testimages
 |      |--test images in png format
+|--OpenDS.ipynb
 |--main.py
 |--util.py
 |--GaborKern.py
@@ -26,10 +27,11 @@ Make sure python 3.6 and the following packages are installed:
 cv2
 numpy
 scipy
+matplotlib
 ````
 Version differences don't cause major issue.
 
-### How to run: 
+### How to run Python files: 
 From terminal, run the command: ````python3 main.py````
 
 Then in current dir, check for file: ```sal_map.jpg```
@@ -37,6 +39,10 @@ Then in current dir, check for file: ```sal_map.jpg```
 If you wish to change the input image, please update this code line in ```main.py```
 
 ```img = cv2.imread("./testimages/test3.png", 1)```
+
+### How to run JupyterNotebook file: 
+From your Jupyter home, open ````OpenDS.ipynb````. This notebook should already contain some output to display through matplotlib.
+
 
 ### Credit: 
 Itti-koch implementation comes from https://github.com/shreelock/gbvs/blob/master/ittikochneibur.py
