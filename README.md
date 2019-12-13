@@ -2,6 +2,20 @@
 Open-source implementation of Discriminant Center-surround Hypothesis on Saliency Detection, based on the paper “On the plausibility of the discriminant center-surround hypothesis for visual saliency” by Dashan Gao; Vijay Mahadevan and Nuno Vasconcelos in 2008 https://ieeexplore.ieee.org/abstract/document/4408851 
 
 This is a project work dedicated to EECS 4422 - Computer Vision course at York University, Fall 2019. 
+Within this repo, there are the following files:
+````
+|
+|--report
+|      |--final_report.pdf
+|      |--miscellaneous files of .tex and .png
+|--testimages
+|      |--test images in png format
+|--main.py
+|--util.py
+|--GaborKern.py
+|--featureMap.py
+|--README.md
+````
 
 ### Installation Instruction: 
 Please pull/ clone this repo
