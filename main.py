@@ -1,5 +1,4 @@
 import cv2
-from matplotlib import pyplot as plt
 import numpy as np
 from scipy.ndimage.filters import maximum_filter
 import math
@@ -112,9 +111,10 @@ if __name__ == '__main__':
     params = setupParams()
    
     img = cv2.imread("./testimages/test3.png", 1)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) 
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # process image to correct channel order
 
     saliency_map = run(img, params)*255.0
+
+    # Save saliency map into current directory
+    cv2.imwrite( "./sal_map.jpg", saliency_map )
  
-    plt.rcParams["figure.figsize"] = (15,15)
-    plt.imshow(saliency_map, cmap='gray')

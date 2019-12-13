@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 
+\graphicspath{ {./} }
 \pagestyle{plain}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -47,7 +48,13 @@ The general architecture of image processing mainly follows the Itti-Koch-Niebur
 
 For static imagery, the process consists of 2 main stages. First stage is feature decomposition, using wavelet or Gabor decomposition to process into intensity map, and 4 color channels. The second stage is saliency detection which involves the center-surround classification (with provided formula for calculation) [7]. It also combines with Gabor or wavelet coefficients to reduce complexity of high dimensional image. One concern was to make sure OpenCV is able to handle the RGBY color channels and taken in account for visual angle (pixels/degrees). 
 
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3.3in]{itti.png}
+    \caption{Itti-Koch model with center surround map computation}
+    \label{fig:itti}
+\end{figure}
+ 
 \section{Results and Validation}
 The project final step would be to apply the implemented model to a set of input images, which is preferably close to the research’s original test set. Previously, the researchers relied on classical experiments in visual attention which were both qualitative and quantitative. For simple target pop-out test, some example images were provided directly in the research paper. And to generate progressive/dependency graph between saliency versus image feature, more static and motion data will be needed. 
 
@@ -55,6 +62,22 @@ Due to the lack of test data sources, the project will simulate input images wit
 
 Neil Bruce, John K. Tsotsos. Attention based on information maximization.120 color images of outdoor and indoor scenes (size: 681 x 511px). Observers: 20 undergrads, grads. A large portion of images here do not contain particular regions of interest. Eye tracker: ERICA workstation including a Hitachi CCD camera with an IR emitting LED.
 
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=3.3in]{itti.png}
+    \caption{Itti-Koch model with center surround map computation}
+    \label{fig:itti}
+\end{figure}
+ 
+ 
+ \begin{figure*}[h]
+    \centering
+    \includegraphics[width=3.3in]{itti.png}
+    \caption{Itti-Koch model with center surround map computation}
+    \label{fig:itti}
+\end{figure}
+ 
+ 
 \section*{Acknowledgment}
 
 The preferred spelling of the word ``acknowledgment'' in America is without 
